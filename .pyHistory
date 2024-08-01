@@ -1,0 +1,6 @@
+﻿desc = arcpy.da.Describe("bike_racks")
+sr = desc["spatialReference"]
+print(sr.name)
+fcs = arcpy.ListFeatureClasses()
+print(fcs)
+for fc in fcs:     desc = arcpy.da.Describe(fc)     sr = desc["spatialReference"]     print(f"{fc}: {sr.name}")
